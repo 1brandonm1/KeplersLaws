@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class UpdateCelestials : MonoBehaviour
 {
-    // actual value is 6.67 * 10^(-11) but want to actually see orbits
-    //public const float G = 0.0001f;
     public const float physicsTimeStep = .01f;
-    public const float G = .001f;
+
+    // actual value is 6.67 * 10^(-11) but leads to error
+    public const float G = .1f;
+
     Celestial[] celestials;
     static UpdateCelestials instance;
 
@@ -17,16 +18,11 @@ public class UpdateCelestials : MonoBehaviour
         Time.fixedDeltaTime = physicsTimeStep;
     }
 
-
-
-
     // for each body in celestials:
     //      calculate its acceleration using its position
     //      then use that acceleration to calculate its new velocity and thus Update its Velocity
     // for each body in celestials:
     //      Update its Position
-
-
     void FixedUpdate()
     {
         for (int i = 0; i < celestials.Length; i++)
@@ -42,6 +38,7 @@ public class UpdateCelestials : MonoBehaviour
 
     }
 
+    // calculates acceleration 
     public static Vector3 CalculateAcceleration(Vector3 point, Celestial ignoreBody = null)
     {
         Vector3 acceleration = Vector3.zero;
@@ -49,6 +46,7 @@ public class UpdateCelestials : MonoBehaviour
         {
             if (body != ignoreBody)
             {
+                // note .sqrMagnitude faster than taking the sqrt
                 float sqrDst = (body.Position - point).sqrMagnitude;
                 Vector3 forceDir = (body.Position - point).normalized;
                 acceleration += forceDir * G * body.GetComponent<Rigidbody>().mass / sqrDst;
