@@ -721,6 +721,11 @@ UnityEngine.Resources::UnloadUnusedAssets
 UnityEngine.Resources::GetBuiltinResource
 UnityEngine.ResourcesAPIInternal::Load
 UnityEngine.ResourcesAPIInternal::FindShaderByName
+UnityEngine.Rigidbody::get_mass
+UnityEngine.Rigidbody::MovePosition_Injected
+UnityEngine.Rigidbody::get_position_Injected
+UnityEngine.Rigidbody::get_velocity_Injected
+UnityEngine.Rigidbody::set_velocity_Injected
 UnityEngine.SceneManagement.Scene::GetBuildIndexInternal
 UnityEngine.SceneManagement.Scene::GetNameInternal
 UnityEngine.SceneManagement.Scene::GetPathInternal
@@ -836,6 +841,7 @@ UnityEngine.Time::get_realtimeSinceStartup
 UnityEngine.Time::get_time
 UnityEngine.Time::get_unscaledDeltaTime
 UnityEngine.Time::get_unscaledTime
+UnityEngine.Time::set_fixedDeltaTime
 UnityEngine.TouchScreenKeyboard::IsInPlaceEditingAllowed
 UnityEngine.TouchScreenKeyboard::get_active
 UnityEngine.TouchScreenKeyboard::get_canGetSelection

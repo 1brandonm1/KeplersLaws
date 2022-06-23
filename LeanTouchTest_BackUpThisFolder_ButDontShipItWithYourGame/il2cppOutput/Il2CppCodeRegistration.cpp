@@ -18,6 +18,7 @@ IL2CPP_EXTERN_C const Il2CppMethodPointer g_Il2CppGenericAdjustorThunks[];
 IL2CPP_EXTERN_C const InvokerMethod g_Il2CppInvokerPointers[];
 IL2CPP_EXTERN_C const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[];
 IL2CPP_EXTERN_C Il2CppInteropData g_Il2CppInteropData[];
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_CW_Common_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_LeanCommon_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_LeanTouch_CodeGenModule;
@@ -55,8 +56,9 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Vuforia_Unity_Wrapper_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[36] = 
+const Il2CppCodeGenModule* g_CodeGenModules[37] = 
 {
+	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_CW_Common_CodeGenModule),
 	(&g_LeanCommon_CodeGenModule),
 	(&g_LeanTouch_CodeGenModule),
@@ -102,7 +104,7 @@ const Il2CppCodeRegistration g_CodeRegistration =
 	30117,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	7216,
+	7218,
 	g_Il2CppInvokerPointers,
 	1297,
 	g_UnresolvedVirtualMethodPointers,
@@ -110,7 +112,7 @@ const Il2CppCodeRegistration g_CodeRegistration =
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	36,
+	37,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;
