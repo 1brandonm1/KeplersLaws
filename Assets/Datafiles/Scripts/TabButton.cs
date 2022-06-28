@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems; // to access IPointer
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Image))]
 public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
